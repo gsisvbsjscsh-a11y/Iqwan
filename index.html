@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asal Usul Mesin Bensin dan Solar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Mesin<span class="accent">Awal</span></div>
+      <nav class="nav">
+        <a href="#bensin" class="nav-link">Mesin Bensin</a>
+        <a href="#diesel" class="nav-link">Mesin Diesel</a>
+        <a href="#sejarah" class="nav-link">Sejarah</a>
+        <a href="#" class="nav-link btn-signup" id="openModal">Langganan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Engine_block_V6.jpg" alt="Mesin bensin dan solar">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-left">
+          <h1 class="hero-title">Asal Usul Mesin Bensin dan Diesel</h1>
+          <p class="hero-sub">Penemuan dua mesin ini mengubah dunia transportasi dan industri selamanya. Mari kita telusuri bagaimana semuanya dimulai.</p>
+          <div class="hero-ctas">
+            <a href="#bensin" class="cta primary">Mulai</a>
+            <a href="#diesel" class="cta outline">Pelajari Lebih Lanjut</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="driver fade-up">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Nikolaus_Otto_Engraving.jpg" alt="Nikolaus Otto">
+            <div class="driver-name"><strong>Nikolaus Otto</strong>Pencipta Mesin Bensin</div>
+          </div>
+          <div class="driver fade-up delay">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Rudolf_Diesel_1912.jpg" alt="Rudolf Diesel">
+            <div class="driver-name"><strong>Rudolf Diesel</strong>Pencipta Mesin Diesel</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bensin" class="container main-grid">
+      <article class="card fade-up">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Otto_engine_1876.jpg" alt="Mesin Otto 1876">
+        <div class="card-body">
+          <h3>Awal Mula Mesin Bensin</h3>
+          <p>Pada tahun 1876, Nikolaus Otto menciptakan mesin pembakaran dalam empat langkah yang menjadi dasar bagi semua mesin bensin modern.</p>
+          <a href="#" class="read">Selengkapnya →</a>
+        </div>
+      </article>
+      <article class="card fade-up delay">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Car_engine.jpg" alt="Mesin mobil modern">
+        <div class="card-body">
+          <h3>Evolusi Mesin Bensin</h3>
+          <p>Dari kendaraan pertama hingga mobil sport modern, mesin bensin terus berkembang dalam efisiensi dan performa.</p>
+          <a href="#" class="read">Selengkapnya →</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="diesel" class="container main-grid">
+      <article class="card fade-up">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Diesel_engine_1904.jpg" alt="Mesin Diesel Awal">
+        <div class="card-body">
+          <h3>Kelahiran Mesin Diesel</h3>
+          <p>Rudolf Diesel memperkenalkan mesin yang lebih efisien dengan kompresi tinggi pada tahun 1897, digunakan hingga kini di truk dan kapal.</p>
+          <a href="#" class="read">Selengkapnya →</a>
+        </div>
+      </article>
+      <article class="card fade-up delay">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Marine_diesel_engine.jpg" alt="Mesin Diesel Modern">
+        <div class="card-body">
+          <h3>Mesin Diesel Modern</h3>
+          <p>Mesin diesel kini menjadi tulang punggung industri transportasi berat dengan inovasi injeksi elektronik dan emisi rendah.</p>
+          <a href="#" class="read">Selengkapnya →</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="copyright">© 2025 MesinAwal. Semua hak dilindungi.</p>
+      <div>
+        <a href="#">Privasi</a>
+        <a href="#">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button id="closeModal" class="modal-close">×</button>
+      <h2>Langganan Pembaruan</h2>
+      <p>Dapatkan artikel menarik seputar sejarah mesin dan teknologi setiap minggu.</p>
+      <form id="signupForm">
+        <input type="email" placeholder="Alamat email kamu" required />
+        <span class="consent">Dengan mendaftar, kamu menyetujui kebijakan privasi kami.</span>
+        <button type="submit" class="cta primary">Langganan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
