@@ -1,78 +1,143 @@
-:root {
-  --bg: #040404;
-  --panel: #0a0a0a;
-  --muted: #bfbfbf;
-  --accent: #c7a34d;
-  --white: #ffffff;
-  font-family: 'Inter', system-ui, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cara Kerja Mesin Hybrid — MOCH IQWAN MA'RUF</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-html, body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--white);
-  line-height: 1.6;
-}
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#beranda" class="logo">IQWAN<span class="dot">.</span></a>
+      <nav>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li><a class="nav-link" href="#pengertian">Pengertian</a></li>
+          <li><a class="nav-link" href="#cara-kerja">Cara Kerja</a></li>
+          <li><a class="nav-link" href="#komponen">Komponen</a></li>
+          <li><a class="nav-link" href="#galeri">Galeri</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  <!-- HERO FULLSCREEN -->
+  <section id="beranda" class="hero">
+    <div class="hero-media">
+      <!-- gunakan salah satu gambar Wikimedia sebagai latar hero -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Parallel_and_Series_Hybrid_Diagram.jpg"
+           alt="Hybrid system diagram" aria-hidden="true" />
+      <div class="hero-overlay"></div>
+    </div>
 
-/* HEADER */
-.site-header {
-  position: fixed; width: 100%; top: 0;
-  background: rgba(0,0,0,0.6); backdrop-filter: blur(8px);
-  z-index: 100;
-}
-.header-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
-.logo { font-weight: 700; font-size: 20px; }
-.logo .accent { color: var(--accent); }
-.nav { display: flex; gap: 20px; }
-.nav-link { color: var(--muted); text-decoration: none; transition: color 0.3s ease; }
-.nav-link:hover { color: var(--white); }
+    <div class="hero-content container">
+      <h1 class="hero-title">MOCH IQWAN MA'RUF</h1>
+      <p class="hero-sub">Belajar bagaimana mesin hybrid bekerja — arsitektur, komponen, dan alur energi.</p>
+      <div class="hero-ctas">
+        <a class="btn primary" href="https://www.instagram.com/23cigarettes" target="_blank">Instagram</a>
+        <a class="btn outline" href="https://wa.me/6285189326394" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </section>
 
-/* HERO */
-.hero { min-height: 90vh; position: relative; display: flex; align-items: center; padding-top: 70px; }
-.hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7); z-index: -1; }
-.hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); z-index: -1; }
-.hero-content { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; }
-.hero-title { font-size: 34px; margin-bottom: 16px; animation: fadeIn 1s ease forwards; }
-.hero-sub { color: var(--muted); margin-bottom: 20px; }
-.cta { padding: 12px 20px; border-radius: 6px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
-.cta.primary { background: var(--accent); color: var(--bg); }
-.cta.primary:hover { transform: scale(1.05); }
-.cta.outline { border: 1px solid rgba(255,255,255,0.3); color: var(--white); }
-.cta.outline:hover { background: rgba(255,255,255,0.1); }
+  <main>
+    <!-- PENGERTIAN -->
+    <section id="pengertian" class="section container reveal">
+      <h2>Apa Itu Mesin Hybrid?</h2>
+      <p>
+        Mesin hybrid menggabungkan mesin pembakaran internal dan motor listrik sehingga
+        kendaraan dapat memanfaatkan energi secara lebih efisien. Sistem mengelola sumber tenaga
+        ini untuk mengoptimalkan konsumsi bahan bakar dan mengurangi emisi.
+      </p>
+    </section>
 
-.hero-right { width: 320px; display: grid; gap: 20px; }
-.driver { background: rgba(255,255,255,0.05); border-radius: 10px; text-align: center; padding: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.6); transition: transform 0.4s ease; }
-.driver:hover { transform: translateY(-8px) scale(1.03); }
-.driver img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; transition: transform 0.5s ease; }
-.driver:hover img { transform: scale(1.05); }
-.driver-name { margin-top: 10px; color: var(--muted); }
+    <!-- CARA KERJA -->
+    <section id="cara-kerja" class="section alt container reveal">
+      <div class="grid-2">
+        <div>
+          <h2>Bagaimana Mesin Hybrid Bekerja?</h2>
+          <p>
+            Pada sistem hybrid, tenaga dapat dialihkan antara mesin bensin dan motor listrik.
+            Saat akselerasi, kedua sumber dapat digunakan bersama; saat pelan atau berhenti,
+            motor listrik dapat menangkap energi pengereman untuk mengisi baterai.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Mode Umum</h3>
+          <ul>
+            <li>EV (motor listrik penuh)</li>
+            <li>Hybrid (kombinasi motor listrik + mesin bensin)</li>
+            <li>Charge/Generator (mesin isi baterai)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-/* CARD GRID */
-.main-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 24px; padding: 60px 0; }
-.card { background: var(--panel); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.7); }
-.card img { width: 100%; height: 220px; object-fit: cover; transition: transform 0.6s ease; }
-.card:hover img { transform: scale(1.08); }
-.card-body { padding: 18px; }
-.read { color: var(--accent); text-decoration: none; transition: color 0.2s ease; }
-.read:hover { color: #f7d67c; }
+    <!-- KOMPONEN -->
+    <section id="komponen" class="section container reveal">
+      <h2>Komponen Utama</h2>
+      <div class="grid-3">
+        <div class="feature">
+          <h4>Mesin Bensin</h4>
+          <p>Memberikan tenaga besar untuk kecepatan tinggi dan pengisian generator.</p>
+        </div>
+        <div class="feature">
+          <h4>Motor Listrik</h4>
+          <p>Menggerakkan roda saat kebutuhan torsi rendah/menengah, dan regeneratif.</p>
+        </div>
+        <div class="feature">
+          <h4>Baterai & BMS</h4>
+          <p>Menyimpan energi dan mengelola siklus pengisian/penyalaan daya.</p>
+        </div>
+      </div>
+    </section>
 
-/* FOOTER */
-.site-footer { background: #080808; border-top: 1px solid rgba(255,255,255,0.1); padding: 24px 0; }
-.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-.footer-inner a { color: var(--muted); text-decoration: none; margin-right: 12px; transition: color 0.2s ease; }
-.footer-inner a:hover { color: var(--white); }
+    <!-- GALERI DENGAN CAPTION -->
+    <section id="galeri" class="section container reveal">
+      <h2>Galeri Mesin Hybrid</h2>
 
-/* MODAL */
-.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: flex; justify-content: center; align-items: center; visibility: hidden; opacity: 0; transition: opacity 0.4s ease; }
-.modal[aria-hidden="false"] { visibility: visible; opacity: 1; }
-.modal-inner { background: #0e0e0e; padding: 24px; border-radius: 10px; width: 400px; max-width: 90%; }
-.modal-close { position: absolute; top: 10px; right: 16px; border: none; background: none; color: var(--muted); font-size: 24px; cursor: pointer; }
+      <div class="gallery">
+        <figure>
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Parallel_and_Series_Hybrid_Diagram.jpg" alt="Parallel and Series Hybrid Diagram">
+          <figcaption>Diagram perbandingan Parallel vs Series Hybrid — arsitektur dan aliran tenaga.</figcaption>
+        </figure>
 
-/* FADE-UP ANIMATION */
-.fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 1s forwards; }
-.fade-up.delay { animation-delay: 0.3s; }
-@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        <figure>
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Hybrid_engine.jpg" alt="Hybrid engine illustration">
+          <figcaption>Ilustrasi sistem hybrid yang menunjukkan hubungan mesin, motor listrik, dan baterai.</figcaption>
+        </figure>
+
+        <figure>
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Honda_Insight_ZE2_Hybrid_system.jpg" alt="Honda Insight hybrid system">
+          <figcaption>Contoh sistem hybrid pada kendaraan nyata — bagaimana motor bantu mesin.</figcaption>
+        </figure>
+
+        <figure>
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Serial_hybrid_ICE_electric.JPG" alt="Serial hybrid schematic">
+          <figcaption>Skematik Serial Hybrid — mesin berfungsi sebagai generator untuk motor listrik.</figcaption>
+        </figure>
+
+        <figure>
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Honda_Hybrid_System_02.JPG" alt="Honda hybrid system cutaway">
+          <figcaption>Potongan mesin hybrid — menampilkan motor listrik dan mesin bensin dalam satu paket.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 MOCH IQWAN MA'RUF — Cara Kerja Mesin Hybrid</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/23cigarettes" target="_blank">Instagram</a>
+        <a href="https://wa.me/6285189326394" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
